@@ -24,6 +24,17 @@ function orderByYear(array){
 
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct
 
+function howManyMovies(array){
+  let spielbergDrama = array.filter( (eachMovie)=>{
+     return eachMovie.genre.includes("Drama") && eachMovie.director == "Steven Spielberg";
+  })
+  if(spielbergDrama.length == 0){
+    return 0;
+  } else{
+    return spielbergDrama.length
+  }
+}
+
 // Iteration 3: Alphabetic Order - Order by title and print the first 20 titles
 
 
@@ -55,8 +66,63 @@ function orderAlphabetically(titleorder) {
 
 // Iteration 4: All rates average - Get the average of all rates with 2 decimals
 
+function ratesAverage(array){
+  if(array.length == 0){
+    return 0
+  }
+  let rates = array.map( (eachMovie)=>{
+    if(eachMovie.rate){
+    return eachMovie.rate
+    } else{
+      return 0
+    }
+  })
+  let sumRates = rates.reduce( (a, c)=>{
+    return a + c
+  })
+  let finalAverage = Number((sumRates / array.length).toFixed(2))
+  console.log(typeof(finalAverage))
+  return finalAverage
+}
+
 // Iteration 5: Drama movies - Get the average of Drama Movies
 
+function dramaMoviesRate(array){
+  let dramaMovies = array.filter( (eachMovie)=>{
+    return eachMovie.genre == "Drama";
+  })
+  return ratesAverage(dramaMovies)
+}
+
 // Iteration 6: Time Format - Turn duration of the movies from hours to minutes
+
+
+    // Goal - Convert duration to a Number(minutes) 
+    // remove/targe h and min =====> Splice, substring, indexOf
+
+    // '2h 22min' 
+    // First - locate what you have hours and minutes????? hours????? minutes??????? 
+    // Conditionals!!!!!!!
+    // indexOf("h")
+    // indexOf("min")
+    // Now...
+    // substring...
+
+    // if("2h 22min".indexOf('h') >=0)
+    // "2h 22min".substring(0, "2h 22min".indexOf('h'))
+    //  let min =  
+    // let hour = 
+
+
+
+
+
+
+
+
+
+
+
+
 
 // BONUS Iteration: Best yearly rate average - Best yearly rate average
