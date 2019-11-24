@@ -121,6 +121,40 @@ function dramaMoviesRate(array){
 
 
 
+    
+    // function turnHoursToMinutes(arr){
+    //   let newArr = arr.map(a => Object.assign({}, a));
+    //   for(let i = 0; i < newArr.length; i += 1){
+    //     if(typeof(newArr[i].duration) !== Number){
+    //       if(newArr[i].duration.indexOf(' ') !== -1 && newArr[i].duration.indexOf('m') !== -1){
+    //         let hoursMinutes = newArr[i].duration.split(' ');      
+    //         let hours = (parseInt(hoursMinutes[0].split(''))) * 60;
+    //         let minutes = parseInt(hoursMinutes[1].split('m'));
+    //         newArr[i].duration = hours + minutes;
+    //       }else if(newArr[i].duration.indexOf('h') !== -1){
+    //         let hoursMinutes = newArr[i].duration.split(' ');
+    //         let hours = (parseInt(hoursMinutes[0].split(''))) * 60;
+    //         newArr[i].duration = hours;
+            
+    //       }else if(newArr[i].duration.indexOf('m') !== -1){
+    //         let hoursMinutes = newArr[i].duration.split(' ');
+    //         let minutes = (parseInt(hoursMinutes));
+    //         newArr[i].duration = minutes;
+    //       }
+    //     }else{
+    //         continue;
+    //       }
+    //   }
+    // return (newArr);  
+    // };
+
+
+
+
+
+
+
+
 
 
 
